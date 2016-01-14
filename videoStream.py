@@ -112,10 +112,12 @@ class main(BoxLayout):
 		self.popup.open()
 
 	def settingProcess(self, btn):
-		self.ipAddress = self.st.text
-		self.port = int(self.pt.text)
-		self.popup.dismiss()
-		
+		try:
+			self.ipAddress = self.st.text
+			self.port = int(self.pt.text)
+			self.popup.dismiss()
+		except:
+			pass
 
 
 class videoStreamApp(App):
