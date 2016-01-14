@@ -1,7 +1,9 @@
-from kivy.core.window import Window
-Window.size = (600, 500)
 from kivy.config import Config
 Config.set('graphics','resizable',0)
+
+from kivy.core.window import Window
+Window.size = (600, 500)
+
 
 
 from kivy.app import App
@@ -115,9 +117,9 @@ class main(BoxLayout):
 		try:
 			self.ipAddress = self.st.text
 			self.port = int(self.pt.text)
-			self.popup.dismiss()
 		except:
 			pass
+		self.popup.dismiss()
 
 
 class videoStreamApp(App):
